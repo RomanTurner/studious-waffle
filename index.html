@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Notes through Phase 0</h1>
+    <h2>View page source to see the code examples.</h2>
+    <section>
+      <h2>Using an 'a' Tag to Create a Link</h2>
+      <!-- 
+     This is the code that they use on their site to display the code block. It doesn't show up 
+     on my site, I believe there is a CSS library that they use to 
+       <pre>
+           <code>
+            "<ul>"
+            </code>
+       </pre> 
+-->
+      <p>
+        This is an example of an 'a' link that is referencing the Flatiron
+        School's website
+      </p>
+      <a href="https://flatironschool.com">Flatiron School</a>
+    </section>
+    <section>
+      <h2>Identify Ordered, Unordered and Definition Lists</h2>
+      <h3>Unordered list</h3>
+      <p>
+        When we want to present a list of items in a clear, readable format, we
+        turn to the HTML unordered list, represented by the <code>ul</code> tag
+        <br />
+        Here is an example of the unordered list:
+      </p>
+      <ul>
+        <li>The first Item in the list</li>
+        <li>The second Item in the unordered list.</li>
+        <li>The list is unordered because it is not numbered.</li>
+      </ul>
+      <h3 id="Ordered-lists">Ordered lists</h3>
+      <ol>
+        <li>First Item in an ordererd list</li>
+        <li>Second Item in an ordered list</li>
+        <li>The Goldilocks of the ordered list</li>
+      </ol>
+      <h3>Deifinition lists</h3>
+      <dl>
+        <dt>First term</dt>
+        <dd>Term Definition</dd>
+        <dt>Second term</dt>
+        <dd>Term Definition</dd>
+        <dt>Third term</dt>
+        <dd>Term Definition</dd>
+        <dt>Fourth term</dt>
+        <dd>Term Definition</dd>
+      </dl>
+    </section>
+    <section>
+      <h2>Identify Images</h2>
+      <p>To include an image in our page, we use an <code>img</code> tag.</p>
+      <img
+        src="https://avatars.githubusercontent.com/u/74572905?s=460&u=af19d3dff27fcd14a354c0594ac1172972032ef4&v=4"
+        alt="GitHub Profile Picture of Roman Turner"
+        title="Display Title"
+      />
+
+      <p>
+        There are two notable things about the img tag: The first is that it
+        does not have a closing tag. The image tag closes itself. Secondly, it
+        handles a lot of attributes. Attributes are special keywords used on the
+        tag to control the element's behavior, or provide additional information
+        about the HTML element.
+      </p>
+      <p>
+        The alt attribute provides descriptive text the browser can display if
+        it can't find the image file. The browser can also display the title
+        text to give the user more information about the image. The width and
+        height attributes define the size of the image that shows up in the
+        browser.
+      </p>
+    </section>
+    <h3>Identify Links</h3>
+    <section>
+      <p>
+        You might be familiar with basic link structure already, but here are
+        other ways we can use them. Beginning with a standard text hyperlink, we
+        an wrap other elements inside of them. This is a link to my website:
+        <a href="https://www.seattleiconic.com/" target="_blank"
+          >SeattleIconic.com</a
+        >
+      </p>
+      <p>
+        This is an example of using the same 'a' tag to create a link. This time
+        we are using a picture as the link item. If you click on this image it
+        will take you to my website.
+      </p>
+      <a href="https://www.seattleiconic.com/"
+        ><img
+          src="https://www.seattleiconic.com/wp-content/uploads/elementor/thumbs/Handingapple-1-oq3rrbnvh7n0b3yfcoxfmvftj2os2hica8dcoxbi60.jpg"
+          alt="Green grocer handing fruit over the counter at a farmer's market."
+      /></a>
+      <p>We can also link other useful things like an email address:</p>
+      <a href="mailto: rn.turner@live.com"
+        >You can send me an email by clicking this sentance.</a
+      >
+      <p>
+        Sometimes we might want to link to a specific location on the same
+        webpage. We can then target an element that we identified or classified
+        earlier.
+      </p>
+      <a href="#Ordered-lists"
+        >Clicking here will take you back to the Ordered lists.</a
+      >
+      <p>
+        When considering what location links point to, you will choose between
+        relative or absolute links. A relative link directs to content within
+        the same website:
+      </p>
+      <a href="page-two.html" target="_blank"
+        >This will take you to the relative URL!</a
+      >
+      <p>
+        On the other hand, the absolute link is what is used above that links to
+        a different websit using their full URL.
+      </p>
+    </section>
+  </body>
+</html>
