@@ -6,8 +6,10 @@
     <title>Document</title>
   </head>
   <body>
+     <h3><a href="../index.html">Home</a></h3>
+      <h3><a href="index.html">Notes</a></h3>
     <h1>HTML Images</h1>
-    <h3><a href="index.html">Home</a></h3>
+   
     <h2>The Img Tag</h2>
     <p>
       Images are inserted into HTML using the img tag. The tag can display a
@@ -40,8 +42,55 @@
       also nice to provide some sort of message to a website visitor if the
       image fails to load, especially if the image is relevant to the rest of
       the content. Alt text on a failed image will appear along with a small
-      'broken image' icon:
+      'broken image' icon.
     </p>
-    
+    <section>
+      <p>
+        In this practice section I am creating three images, the difference will
+        be in the attributes. Look at source code to see.
+      </p>
+      <img src="https://s3.amazonaws.com/ironboard-learn/lion.jpg" />
+      <p>This is an image with just the source tag.</p>
+      <img
+        src="https://s3.amazonaws.com/ironboard-learn/lion.jpg"
+        alt="King of the jungle in a grass field roaring"
+      />
+      <p>This one has the source tag and the alt text.</p>
+      <img
+        src="https://s3.amazonaws.com/ironboard-learn/lion.jpg"
+        alt="King of the jungle in a grass field roaring"
+        title="XD Rawr"
+      />
+      <p>This image has the alt text and a title attribute.</p>
+    </section>
+    <section>
+      <h3>Combining what we have learned</h3>
+      <p>We are going to make a list of images</p>
+      <h4>My favorite Naruto characters</h4>
+
+      <ul>
+        <li>
+          自来也 Jiraiya 
+            <li>
+                <img src="https://nerdhits.com.br/wp-content/uploads/2020/05/conto-do-galante-jiraya-1.jpg"
+                alt="自来也 Jiraiya" title="Toad Sage"/>
+            </li>
+        </li>
+        <li>
+          波風ミナト Namikaze Minato
+            <li>
+                <img src="https://i.pinimg.com/736x/96/09/b3/9609b32b6798e07a4de3a41f4f52c22d.jpg"
+                alt="波風ミナト Namikaze Minato" title="Yellow Flash"/>
+            </li>
+        </li>
+        <li>
+          猿飛アスマ Sarutobi Asuma
+            <li>
+                <img src="https://qph.fs.quoracdn.net/main-qimg-e5b99b47da6e18ca01c3bbfdab824b0b"
+                alt="猿飛アスマ Sarutobi Asuma"/>
+            </li>
+        </li>
+      </ul>
+    </section>
   </body>
 </html>
