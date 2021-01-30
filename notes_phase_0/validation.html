@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <h3><a href="../index.html">Home</a></h3>
+    <h3><a href="index.html">Notes</a></h3>
+    <section>
+      <h1>HTML Validation</h1>
+      <p>
+        Like all other programming languages, HTML can contain all kinds of
+        different errors. These can range from missing angle brackets to wrong
+        or missing opening or closing tags, unnecessary or missing attributes,
+        and many other issues. Our web browsers are pretty good at filling in
+        the missing pieces but we can't always count on it being the same
+        experience with every one. Tools like W3C's HTML Validator can catch
+        these errors and prevent our user from having a poor experience.
+      </p>
+      <h2>Identifying HTML Errors</h2>
+      <p>
+        Now that we have a page full of HTML validation errors, how do we start
+        fixing them? There are several parts of the error message that will help
+        us parse the error, and figure out exactly where it is and what we can
+        do to fix it.
+      </p>
+      <img
+        src="https://s3.amazonaws.com/learn-verified/html-error-description.png"
+        alt="Error Description example"
+        width= 75%;
+        height=75%;
+      />
+      <h3>Error Description</h3>
+      <p>
+        The first line of the error is our error description. This is a
+        narrative that gives us a little bit more information about our error.
+      </p>
+      <h3>Error Location</h3>
+      <p>
+        The second and third lines of this error give us the exact location of
+        the error, as well as a highlighted snippet of our HTML to help us
+        exactly locate where the error is.
+      </p>
+      <img
+        src="https://s3.amazonaws.com/learn-verified/html-error-location.png"
+        alt="Error Location"
+          width= 75%;
+        height=75%;
+      />
+      <p>
+        In this case, it's letting us know that our error is on line 10, from
+        column 34-38. Line numbers will become very important in troubleshooting
+        errors, in JavaScript and CSS as well as HTML. These error messages can
+        serve as a road map to us, and help us troubleshoot much more
+        efficiently.
+      </p>
+    </section>
+    <section>
+      <h2>Navigating the MDN Reference Guide</h2>
+      <p>
+        The
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element"
+          target="_blank"
+          >MDN HTML Reference Guide
+        </a>
+        (Links to an external site.) is a list of HTML tags grouped together by
+        their functions. These sections are not entirely "human readable," which
+        makes it a bit difficult to understand where to start looking. Some of
+        the headings are very technical-sounding. To help you find what you need
+        in this listing, we've created this helpful table to help you convert
+        between MDN-ese and the HTML terms you have learned. We've also listed
+        only the MDN content sections that you're most likely to use:
+      </p>
+      <p><em>Summary of the MDN HTML reference guide</em></p>
+      <table border="1" cellpadding="4" cellspacing="0">
+        <tbody>
+          <tr>
+            <th>MDN Section Title</th>
+            <th>Human Friendly Section Title</th>
+            <th>Summary</th>
+          </tr>
+          <tr>
+            <td>
+              <strong>Main Root</strong>
+            </td>
+            <td>
+              The
+              <code>html</code>
+              tag
+            </td>
+            <td>
+              <em
+                >The
+                <code>html</code>
+                tag and that's it!</em
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Document metadata</strong>
+            </td>
+            <td>Website data that goes in the <code>head</code> tag</td>
+            <td>
+              <em
+                >"Metadata contains information about the page. Information
+                about styles, scripts and data to help software (search engines,
+                browsers, etc.) use and render the page."</em
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Sectioning Root</strong>
+            </td>
+            <td>The <code>body</code> tag</td>
+            <td>
+              <em>The <code>body</code>and that is it!</em>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong> Content Sectioning </strong>
+            </td>
+            <td>Headings, titles, divs, secitons, footers, etc.</td>
+            <td>
+              <em
+                >"Content sectioning elements allow you to organize the document
+                content into logical pieces</em
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Text Content</strong>
+            </td>
+            <td>
+              "Formatting for text: list items, horizontal rules, figures
+              listings for under images
+            </td>
+            <td>
+              <em>
+                Use HTML text content elements to organize blocks or sections of
+                content place between the opening and closing
+                <code>body</code> tags.
+              </em>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong> Inline Text Semantics </strong>
+            </td>
+            <td>Citation, emphhasis, underlines, etc.</td>
+            <td>
+              <em
+                >"Use the HTML inline text semantics to define the meaning,
+                structure, or style of a word, line or any arbitrary piece of
+                text."</em
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Image and Multimedia</strong>
+            </td>
+            <td>Adding pictures and Media!</td>
+            <td>
+              <em>
+                HTML supports various multimedia resources such as images,
+                audio, and video.
+              </em>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong> Embedded Content </strong>
+            </td>
+            <td>
+              Advanced: Using material hosted elswere on other servers,
+              <code>iframe</code> is the biggie here.
+            </td>
+            <td>
+              <em>
+                "In addition to regular multimedia content, HTML can include a
+                variety of other content, even if it's not always easy to
+                interact with."
+              </em>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong> Scripting </strong>
+            </td>
+            <td>Advanced: JavaScript and Drawing Support (Vector Graphics)</td>
+            <td>
+              <em>
+                "In order to create dynamic content and Web applications, HTML
+                supports the use of scripting languages, most prominently
+                JavaScript. Certain elements support this capability."
+              </em>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Table content</strong>
+            </td>
+            <td>Tables</td>
+            <td>
+              <em> Tables </em>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong> Forms </strong>
+            </td>
+            <td>
+              Advanced: Tags for building forms for sign-up or login for
+              example.
+            </td>
+            <td>
+              <em>
+                HTML provides a number of elements that can be used together to
+                create forms which the user can fill out and submit to the Web
+                site or application. There's a great deal of further information
+                about this available in the HTML forms guide.
+              </em>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </body>
+</html>
