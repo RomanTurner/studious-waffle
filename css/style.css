@@ -33,7 +33,7 @@ body {
   padding: .5rem;
 }
 .nav-link{
-  color: #5b5555!important;
+  color: black!important;
 }
 .nav-link.active,
 .nav-link:hover{
@@ -101,6 +101,11 @@ transition: transform 1.2s ease;
 .btn-primary {
   background-color: #240046;
   border: .1rem solid #240046;
+}
+.btn-danger:hover,
+.btn-danger:focus{
+  background-color: #9D75CB!important;
+  border: .1rem solid #9D75CB!important;
 }
 .btn-primary:hover,
 .btn-primary:focus {
