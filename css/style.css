@@ -11,6 +11,10 @@ body {
 .text-success {
   color: #9d75cb !important;
 }
+code {
+  color: #240046;
+  background-color: #e7e6e6;
+}
 /*============= TOP BAR HEADER =============*/
 .top-bar {
   background: #240046;
@@ -146,6 +150,15 @@ a:hover {
 }
 
 /*============= BLOG =============*/
+.picture-list{
+  list-style-type: none;
+}
+
+.rounded-circle {
+  box-shadow: 0 0.5rem 0.5rem rgba(157, 117, 203, .5);
+  border-radius: 50%!important;
+}
+
 .blog-main h1,
 .blog-main h2,
 .blog-main h3 {
