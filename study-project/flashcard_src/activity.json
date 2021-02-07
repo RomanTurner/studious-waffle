@@ -1,56 +1,90 @@
+
 {"questionlist":[
-{"cardfront":"CAT",
-"cardback":"GATO"
+{"cardfront":"concat( )",
+"cardback":"Joins two or more arrays, and returns a copy of the joined arrays"
 },
-{"cardfront":"DOG",
-"cardback":"PERRO"
+{"cardfront":"copyWithin( )",
+"cardback":"Copies array elements within the array, to and from specified positions"
 },
-{"cardfront":"HORSE",
-"cardback":"CABALLO"
+{"cardfront":"entries( )",
+"cardback":"Returns a key/value pair Array Iterations Object"
 },
-{"cardfront":"RABBIT",
-"cardback":"CONEJO"
+{"cardfront":"every( )",
+"cardback":"Checks if every element in an array pass a test"
 },
-{"cardfront":"TIGER",
-"cardback":"TIGRE"
+{"cardfront":"fill()",
+"cardback":"Fill the elements in an array with a static value"
 },
-{"cardfront":"KANGAROO",
-"cardback":"CANGURO"
+{"cardfront":"filter( )",
+"cardback":"Creates a new array with every element in an array that pass a test"
 },
-{"cardfront":"CAT",
-"cardback":"GATO"
+{"cardfront":"find( )",
+"cardback":"Returns the value of the first element in an array that pass a test"
 },
-{"cardfront":"DOG",
-"cardback":"PERRO"
+{"cardfront":"findIndex( )",
+"cardback":"Returns the index of the first element in an array that pass a test"
 },
-{"cardfront":"HORSE",
-"cardback":"CABALLO"
+{"cardfront":"forEach( )",
+"cardback":"Calls a funciton for each array element"
 },
-{"cardfront":"RABBIT",
-"cardback":"CONEJO"
+{"cardfront":"from( )",
+"cardback":"Creates an array from an object"
 },
-{"cardfront":"TIGER",
-"cardback":"TIGRE"
+{"cardfront":"includes( )",
+"cardback":"Check if an array contains the specified element"
 },
-{"cardfront":"KANGAROO",
-"cardback":"CANGURO"
+{"cardfront":"indexOf( )",
+"cardback":"Search the array fro an element and reurns its position"
 },
-{"cardfront":"CAT",
-"cardback":"GATO"
+{"cardfront":"isArray( )",
+"cardback":"Checks whether an object is an array"
 },
-{"cardfront":"DOG",
-"cardback":"PERRO"
+{"cardfront":"join( )",
+"cardback":"Joins all elements of an array into a string"
 },
-{"cardfront":"HORSE",
-"cardback":"CABALLO"
+{"cardfront":"keys( )",
+"cardback":"Returns a Array Iteration Object, containing the keys of the original array"
 },
-{"cardfront":"RABBIT",
-"cardback":"CONEJO"
+{"cardfront":"lastIndexOf( )",
+"cardback":"Search the array for an element, starting at the end, and returns its position"
 },
-{"cardfront":"TIGER",
-"cardback":"TIGRE"
+{"cardfront":"map( )",
+"cardback":"Creates a new array with the result of calling a funcion for each array element"
 },
-{"cardfront":"KANGAROO",
-"cardback":"CANGURO"
+{"cardfront":"pop( )",
+"cardback":"Removes the last element of an array, and returns that element"
+},
+{"cardfront":"push( )",
+"cardback":"Adds new elements to the end of an array, and returns the new length"
+},
+{"cardfront":"reduce( )",
+"cardback":"Reduce the values of an array to a single value (going left-to-right)"
+},
+{"cardfront":"reduceRight( )",
+"cardback":"Reduce the values of an array to a single value (going right-to-left)"
+},
+{"cardfront":"reverse( )",
+"cardback":"Reverses the order of the elements in an array"
+},
+{"cardfront":"slice( )",
+"cardback":"Selects a part of an array, and returns the new array"
+},
+{"cardfront":"some( )",
+"cardback":"Checks if any of the elements in an array pass a test"
+},
+{"cardfront":"sort( )",
+"cardback":"Sorts the elements of an array"
+},
+{"cardfront":"splice( )",
+"cardback":"Adds/Removes elements from an array"
+},
+{"cardfront":"toString( )",
+"cardback":"Converts an array to a string, and returns the result"
+},
+{"cardfront":"unshift( )",
+"cardback":"Adds new elements to the beginning of an array, and returns the new length"
+},
+{"cardfront":"valueOf( )",
+"cardback":"Returns the primitive value of an array"
 }
 ]}
