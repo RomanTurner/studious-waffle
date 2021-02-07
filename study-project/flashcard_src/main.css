@@ -9,11 +9,16 @@ user-select: none;
 font-family: Montserrat;
 src: url('Montserrat-Medium.ttf');
 }
-#activityTitle{
+#activityTitle {
+color: black;
 text-align:center;
 font-size:38px;
 font-family:Montserrat,Arial;
 margin-top:50px;
+}
+p {
+    color: black;
+    text-align: center;
 }
 #cardArea{
 width:800px;
