@@ -77,22 +77,22 @@
 
     <!-- End Navigation -->
     <div class="header">
-      <section class="hero-section">
-        <div class="hero-mask"></div>
+      <section class="hero-section-elo">
+        <div class="hero-mask-elo"></div>
         <!--//hero-mask-->
         <div class="container text-center py-5">
           <div class="single-col-max mx-auto">
             <div class="hero-heading-upper pt-3 mb-3">
-              Flatiron Lesson Notes <br class="d-md-none" />
-              for
+              Roman Turner's notes on  <br class="d-md-none" />
+              
             </div>
             <h1 class="hero-heading mb-5">
               <span class="brand mb-4 d-block"
                 ><span class="text-highlight pr-2">{</span
-                ><span class="name">Roman Turner</span
+                ><span class="name">Eloquent JavaScript</span
                 ><span class="text-highlight pl-2">}</span></span
               >
-              <span class="desc d-block">Phase 0</span>
+              <span class="desc d-block">by Marijn Haverbeke </span>
             </h1>
           </div>
           <!--//single-col-max-->
@@ -102,7 +102,7 @@
       <!--//hero-section-->
     </div>
     <!--//header-->
-
+<a class="navbar bg-primary sticky-top emoji" href="#contents"></a>
     <!--Blog Heading-->
 
     <main role="main" class="container"  id="contents">
@@ -255,6 +255,80 @@ for (let hashAngle = "#"; hashAngle.length &lt; 8; hashAngle += "#"){
                 </p>
                 </li>
               </ul>
+
+              <p><strong>ChessBoard</strong></p>
+              <p>"Write a program that creates a string that represents an 8X8 grid, using new-line characters to separate lines. At each position of the grid there is either 
+                a space <code>" "</code> or a <code>#</code> character. The characters should form a chessboard. 
+                Passing this string to <code>console.log</code> should show something like this:
+              </p>
+              <div class="pre-code bg-light col-md-10">
+                <pre><code>
+                   # # # #
+                  # # # #
+                   # # # #
+                  # # # #
+                   # # # #
+                  # # # #
+                   # # # #
+                  # # # #
+                </code></pre>
+              </div>
+              <p>When you have a program that generates this pattern, define a binding <code>size = 8;</code> and
+              change the program so that it works for any <code>size</code>, outputting a grid of the given width and height.</p>
+
+              <p>
+                This was an interesting exercise. Looking at the board we have to print horizantal and vertical lines. It reminded me of
+                some exercises I have done with multidemensional arrays which are just a grid. To access and maniputlate data in a grid you have to have
+                nested loops so I new that I would be using a nested <code>for</code> loop. I recognize that <code>strings</code> are essentially arrays and decided to start there.
+              </p>
+
+              <p>
+                First I initialized our variables. The size of the board, and the string I'll use to hold the array of characters.
+                I then built the nexted <code>for</code> loop. 
+              </p>
+              <div class="pre-code bg-light col-md10">
+                <pre><code>
+                  let size = 8;
+                  let board = "";
+
+                  for (let i = 0; i &lt; size; i++) {
+                    for(i = 0; i &lt; size; i++) {
+                      -some conditional to print chars-
+                    }
+                  }
+                </code></pre>
+              </div>
+
+              <p>
+                Well, that looks right but a little confusing. So because it is a grid, let us use the variable names x & y as our axis.
+                This will also not print vertically as a string. So we have to add in newline character to print once we reach the end of the x axis. 
+                We will also have to concatanate the character on the string, we can do this using the <code>+=</code> operator. 
+              </p>
+                            <div class="pre-code bg-light col-md10">
+                <pre><code>
+                let size = 10;
+
+                let board = "";
+
+                for (let y = 0; y &lt; size; y++) {
+                  for (let x = 0; x &lt; size; x++) {
+                    if ((x + y) % 2 == 0) {
+                      board += " ";
+                    } else {
+                      board += "#";
+                    }
+                  }
+                  board += "\n";
+                }
+
+                console.log(board);
+                </code></pre>
+              </div>
+
+              <p>Inspect and run this in the console to see the Chessboard print out. 
+                Change the variable <code>size</code> to make a bigger or smaller board.
+              </p>
+
                <a href="#contents">^ Back to Top ^</a>
             </div>
         <!-- Section End -->
