@@ -468,25 +468,74 @@
                 Most require recursive functions to access the properties.
               </p>
 
-              <pstrong>For .. of Loop</pstrong>
+              <p><strong>For .. of Loop</p></strong>
 
-              <code
-                >for (let entry of JOURNAL) { Console.log(entry.evens.lenght)}
-              </code>
-
+              <p>
+                <code
+                  >for (let entry of JOURNAL) { Console.log(entry.evens.lenght)}
+                </code>
+              </p>
+              <p>
+                When a <code>fore</code> loop looks like this, with the word
+                <code>of</code> after a variable definitino, it will loop over
+                the elements of the value given after <code>of</code>. This
+                works not only for arrays but also for stringw and some other
+                data structures.
+              </p>
+              <p><strong>Further Arrayology</strong></p>
+              
+              <ul>
+                <li>
+                  <code>push</code>, and <code>pop</code> add and remeove elements at the <em>end</em> of an 
+                array. 
+              </li>
+                <li>
+                  <code>shift</code>, and <code>unshift</code> add and remove things at the start of an array.
+                </li>
+                <li>
+                  <code>indexOf</code> searches through the array from the start to the end and returns an index at which the requested value was found. <code>-1</code> if it wasn't found.
+                </li>
+                <li>
+                  To Search from the end to the beggining use <code>lastIndexOf</code>. Both have a optional second argument that indicates where to start searching.
+                </li>
+                <li>
+                  <code>slice</code> takes start and end indices and returns an array that has only the elemnts between them. The start is inclusive, the end index is exclusive.
+                  When the end index is not given, <code>slice</code> will take all of the elements after the start index.
+                </li>
+              </ul>
+                
+                <p><strong>Strings and their Properties</strong></p>
+                <p>
+                  Every string value has a number of methods. Some very useful ones are <code>slice</code> and <code>indexOf</code> which reesemble the array method of the same name. 
+                  The <code>indexOf</code> method for a string can search a string containing more than one character.
+                </p>
+                <ul>
+                  <li>
+                    <code>trim</code> removes whitespace (Spaces, newlines, tabs, and similar characters) from the start and end of a string.
+                  </li>
+                  <li>
+                    <code>padStart</code>  and <code>padEnd</code> take the desired length and padding character as arguements and apply them to the start and end respectively. This does not change the value of the original string.
+                  </li>
+                  <li><code>split</code></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+              
               <div class="pb-3">
-                <a
+                <ul>
+                  <li><a href="https://www.w3schools.com/js/js_objects.asp"
+                  ><strong>W3's resources on Objects</strong></a
+                ></li>
+                  <li><a
                   href="https://www.freecodecamp.org/news/here-are-the-new-built-in-methods-and-functions-in-javascript-8f4d2fd794fa/"
                   >Object Methods and Functions</a
-                >
-                <a href="https://www.w3schools.com/js/js_objects.asp"
-                  ><strong>W3's resources on Objects</strong></a
-                >
-                <br />
-                <a href="/eloquent/elo-js-chpt-one.html"
+                ></li>
+                  <li> <a href="/eloquent/elo-js-chpt-one.html"
                   >Chapter 4 Exercises.</a
-                >
-                <br />
+                ></li>
+                <l><a href="https://www.w3schools.com/js/js_string_methods.asp">String Methods</a></l>
+                </ul>
+             
               </div>
               <a href="#contents"><i class="far fa-arrow-alt-circle-up"></i></a>
             </div>
