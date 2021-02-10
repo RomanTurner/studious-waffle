@@ -25,7 +25,7 @@
     <div class="top-bar">
       <div class="container">
         <div class="call-12 text-right">
-          <p><a href="mailto: rn.turner@live.com">Send me an Email!</a></p>
+          <p> <a href="https://github.com/RomanTurner" target="_blank"><i class="fab fa-2x fa-github"></i></a></p>
         </div>
       </div>
     </div>
@@ -150,7 +150,7 @@
                  There were no exercises on chapter one. I also did not take detailed notes of this chapter 
                  as there is already notes about the content matter on my site. You can find these notes <a href="../notes_phase_0/notes-nav.html">here</a>.
                 </p>   
-                <a href="#contents">^ Back to Top ^</a>
+            <a href="#contents"><i class="far fa-arrow-alt-circle-up"></i></a>
             </div>
         <!-- Section End -->
         <!-- Section Start -->
@@ -329,7 +329,7 @@ for (let hashAngle = "#"; hashAngle.length &lt; 8; hashAngle += "#"){
                 Change the variable <code>size</code> to make a bigger or smaller board.
               </p>
 
-               <a href="#contents">^ Back to Top ^</a>
+            <a href="#contents"><i class="far fa-arrow-alt-circle-up"></i></a>
             </div>
         <!-- Section End -->
         <!-- Section Start -->
@@ -338,9 +338,83 @@ for (let hashAngle = "#"; hashAngle.length &lt; 8; hashAngle += "#"){
                 Chapter 3: Functions.
               </h2>
                 <p>
-                 Exercises for Chapter 2. 
+                 Exercises for Chapter 3. 
                 </p>
-               <a href="#contents">^ Back to Top ^</a>
+                <p><strong>Minimum</strong></p>
+                <p>
+                  We were introduced to the <code>Math.min</code> standard function. Now it is our time to build it from scratch.
+                  The exercise is to write a function that takes two arguments and returns their minimum.
+                </p>
+                <div class="col-md-10 pre-code bg-light">
+                  <pre><code>
+                    function findMin(a, b) {
+                    if (a&lt;b) return a;
+                    else return b;
+                  }
+                  </code></pre>
+                </div>
+                <p>This one was pretty simple. We just take the two parameters and use the conditional operator of less-than to compare.</p>
+                
+                <p><strong>Recursion</strong></p>
+                <p>
+                  I always was intimidated by recursion. When I was in college I this was a concept that I could not grasp. 
+                  Looking back, I was just not in the right time to be going through school. Now, I am feeling much more comfortable with the concept. 
+                </p>
+                <p>
+                  This exercise is about creating a function that will define a number as even or odd using recursion.
+                  Here's another way to define wheter a positive whole number is even or odd:
+                  <ul>
+                    <li>Zero is Even.</li>
+                    <li>One is Odd.</li>
+                    <li>For any other number N, its eveness is the same as <em>N-2</em>.</li>
+                  </ul>
+                </p>
+
+                <div class="col-md-10 pre-code bg-light">
+                  <pre><code>
+               function isEven(n) {
+                 if (n == 0) return true;
+                 else if (n == 1) return false;
+                 else if (n &lt; 0) return isEven(-n);
+                 else return isEven(n - 2);
+               }
+                  </code></pre>
+                </div>
+
+                <p>
+                  We first take any integer as the argument. In a series of comparison operations we will wittle the integer down to equalling either 1 or 0.
+                  If it is a negative number we run it through the function again with a minus operator creating it's additive inverse. 
+                  If it does not equal 1 or 0 it will be run through the function recursively as a positive integer yielding the same results. 
+                </p>
+                <p><strong>Bean Counting</strong></p>
+                <p>
+                  You can get the Nth character, or letter, from a string by writing <code>string[N]</code> 
+                  The returned value will be a string containg only one character. The string works as an array for characters. 
+                  Write a function called <code>countBs</code> that takes a string as its only argument and returns a number that indicates how many uppercase "B" characters there are in the string.
+                  Next, write a funciton called <code>countChar</code> that behaves like <code>countBs</code>, except it takes a second argument that indicates the character that is to be counted.
+                </p>
+                <div class="col-md-10 pre-code bg-light">
+                  <pre><code>
+
+                    function countChar(string, char) {
+                      let newString = "";
+                      for (let i = 0; i &lt; string.length; i++) {
+                        if (string[i] == char) newString += char;
+                      }
+                      return newString.length;
+                    }
+
+                    function countBs(string) {
+                      return countChar(string, "B");
+                    }
+                  </code></pre>
+                </div>
+                <p>
+                  We will iterate over the string using a <code>for</code> loop, comparing the current element to the character we are searching for. If is the same character it get concatanated 
+                  onto the newString. We will return the length of the string as each index is just a single character, and we are only searching for single character elements. 
+                </p>
+    
+                <a href="#contents"><i class="far fa-arrow-alt-circle-up"></i></a>
             </div>
         <!-- Section End -->
         <!-- Section Start -->
@@ -349,9 +423,223 @@ for (let hashAngle = "#"; hashAngle.length &lt; 8; hashAngle += "#"){
                 Chapter 4: Data Structures: Objects and Arrays.
               </h2>
                 <p>
-                 Exercises for Chapter 2. 
+                 Exercises for Chapter 4. 
                 </p>
-               <a href="#contents">^ Back to Top ^</a>
+                <p>
+                  This was a bit of a doozy diving into, honestly. I think that the methods that they use to solve the exercises are a bit more 'eloquent' than the chapter will prepare you for. 
+                  That being said, they are challenging but once it clicks it is a satisfying feeling. Many parts of this didn't click in working through the problems by myself, but with some excellent help from some 
+                  research it set in better than ever. Let us look at what they were. 
+                </p>
+                <p><strong>The Sum of a Range</strong></p>
+                <p>
+                  <ul>
+                    <li>Write a <code>range</code> function that takes two arguments, <code>start</code> and <code>end</code>, and returns an array containing all the numbers from <code>start</code> up to (and including) <code>end</code>.</li>
+                    <li>Write a <code>sum</code> function that takes an array of numbers and returns the sum of these numbers.</li>
+                    <li>Modify the <code>range</code> function to take a 'step' value. If no step is given the elements will increment by one.</li>
+                  </ul>
+                </p>
+                <div class="col-md-12 bg-light pre-code">
+                  <pre><code>
+     function range(start, end, step = 1) {
+       let rangeArray = [];
+                       
+       if (step &lt; 0) {
+           for (let i = start; i >= end; i += step) rangeArray.push(i);
+       }
+       else {
+           for (let i = start; i &lt;= end; i += step)rangeArray.push(i);
+       }
+       return rangeArray;
+    }
+   
+    function sum(array) {
+        let sum = 0;
+        for (let num of array){
+            sum += num;
+        }
+        return sum;
+    }
+   
+                  </code></pre>
+                </div>
+                <p>
+                  In my solution I iterate over the range given and use the push method to store the integers given. 
+                  At the start I check to see if the step is a negative number, if it is then the rational operator is set to greater-than so it becomes a countdown. 
+                  For the sum function I use the for..of loop to iterate over each array and add each element to sum, creating a sum of all array elements. 
+                </p>
+                <p><strong>Reversing an Array</strong></p>
+                <p>
+                  For this exercise, I had to write two functions: reverseArray and reverseArrayInPlace. One being nondestructive and the other destructive. 
+                  This one gave me the stumpers for a minute. I those moments where you forget how and why a for loop actually works. It was a bad day for that to happen but 
+                  as I continued to research I found some great resources. This was a section where the book's solution was a bit eloquent, and not explanitory. I think code 
+                  should be accessible and conceptually easy to grasp by looking at it. Avoid being clever as they say. 
+                </p>
+                <h4>My Solution</h4> 
+                <div class="col-md-12 bg-light pre-code">
+                  <pre><code>
+              function reverseArray(array) {
+                let newArray = [];
+                  for (let i = array.length - 1; i >= 0; i--) {
+                      newArray.push(array[i]);
+                }
+                return newArray;
+              }
+
+             function reverseArrayInPlace(array) {
+                let arrLength = array.length;
+                for (let i = 0; i &lt; arrLength; i++) {
+                  array.splice(i, 0, array.pop());
+                }
+              };
+                  </code></pre>
+                </div>
+                <p>
+                  In the reverseArray function is a lot easier, you just iterate over the array pushing one element from the parameter into a new array in reverse order. 
+                  The reverseArrayInPlace is a bit funky, or atleast until I found this easy to read, easy to understand approach. 
+                  We start working through the array with the splice method <code>arr.splice(start, deleteCount, element)</code>. With the parameters of [element insertion point, no delete, and what element we are putting in the array].
+                  By using the array.pop() method which returns the element it chops off the end of the array feed two dogs with one bone.
+                </p>
+              <h4>Book Solution</h4>   
+                <div class="col-md-12 bg-light pre-code">
+                  <pre><code>
+                function reverseArrayInPlace(array) {
+                  for (let i = 0; i &lt; Math.floor(array.length / 2); i++) {
+                    let old = array[i];
+                    array[i] = array[array.length - 1 - i];
+                    array[array.length - 1 - i] = old;
+                  }
+                  return array;
+                }
+                  </code></pre>
+                </div>
+                <p>I found it convoluted and difficult to read. </p>
+
+                <p><strong>A List</strong></p>
+                <p>The excercise is to:</p>
+                <ul>
+                  <li>Create a function arrayToList that builds up a list strucute from an array.</li>
+                  <li>Create a function listToArray that produces an array from a list.</li>
+                  <li>Add a helper function <em>prepend</em> that takes an element and a list and creates a new list that adds the element to the front of the input list.</li>
+                  <li>Create <em>nth</em> function takes a list and a number and returns the element at the given position in the list, or undefined when there is no such element.</li>
+                </ul>
+                <div class="col-md-12 bg-light pre-code">
+                  <pre>
+                    <code>
+                  function arrayToList(array) {
+                      let list = null;
+                      for (let i = array.length - 1; i >= 0; i--){ 
+                          list = { value: array[i], rest: list };
+                      }
+                      return list;
+                  }
+
+                  function listToArray(list) {
+                      let newArray = [];
+                      for (node = list; node; node = node.rest){
+                          newArray.push(node.value);
+                      }
+                      return newArray;
+                  }
+
+                  function prepend(value, list) {
+                      return { value, rest: list };
+                  }
+
+                  function nth(list, n) {
+                      if (!list) return undefined;
+                      else if (n == 0) return list.value;
+                      else return nth(list.rest, n - 1);
+                  }
+                    </code>
+                  </pre>
+                </div>
+                <p>
+                  In creating the list you have to iterate over the values creating the links in a leap-frog fashion. Where the last rest: will be null. 
+                  In the function of putting a list to an array is when I really struggled figuring out how to create a loop with values that are null, and it brought back 
+                  the basics! I found this amazing response on stackover flow (linked below, and thank you BatScream &lt;3).
+                </p>
+                <p>
+                  <code>BatScream </code>says: <br>
+                  <div class="blockq">
+                    <i class="fa fa-quote-left " aria-hidden="true"></i><br>
+                  <div class="pl-3">      
+                     
+                    To understand how this works, you need to know two things:
+                    <ul>
+                      <li>How JavaScript <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for" target="_blank">For</a> loop works.</li>
+                      <li>What are <a href="https://developer.mozilla.org/en-US/docs/Glossary/Truthy" target="_blank">truthy</a> values.</li>
+                    </ul>   
+                </p>
+                <p>
+                  The <code>syntax</code> for the for loop statement:
+                </p>
+                <div class="quote col-md-12 bg-light pb-3 pt-3">
+                   <p>for ([initialization]; [condition]; [final-expression]) statement</p> 
+                    <p> [condition] An expression to be evaluated before each loop iteration. 
+                    If this expression evaluates to true, statement is executed. 
+                    If the expression evaluates to false, execution skips to the first expression following the for construct.</p>   
+                </div>
+                <p>In Java script, a <code>truthy</code> value evaluates to true when evaluated in a Boolean context.</p>
+                <div class="quote col-md-12 bg-light pb-3 pt-3">
+                   <p>
+                    All values are truthy unless they are defined as falsy (i.e., except for false, 0, "", null, undefined, and NaN).
+                   </p> 
+                </div>
+                <p>
+                  So till <code>node</code> is <code>null</code> at one point, we may say that <code>node</code> is <code>truthy</code> and evaluates to <code>true</code>.
+                  When the statement, <code>node = node.rest</code> assigns a <code>null</code> value to <code>node</code>, the <code>for</code> loop exits.
+                </p>
+             </div>  
+             <i class="float-right fa fa-quote-right " aria-hidden="true"></i><br>  
+           </div>
+            
+           <p class="pt-5"><strong>Deep Comparison</strong></p>
+           <p>
+             Write a function <code>deepEqual</code> that takes two values and returns true only if they are the same value or are objects with the same properties,
+             where the values of the properties are equal when compared with a recursive call to <code>deepEqual</code>.
+           </p>
+
+           <div class="col-md-10 pre-code bg-light">
+             <pre><code>
+ function deepEqual(a, b) {
+   if (a === b) return true;
+   if (a == null || typeof a != "object" ||
+       b == null || typeof b != "object")
+     return false;
+   const keysA = Object.keys(a),
+     keysB = Object.keys(b);
+   if (    keysA.length != keysB.length) return false;
+           
+   for (let key of keysA) {
+     if (!keysB.includes(key) || !deepEqual(a[key], b[key]))
+      return false;
+   }
+   return true;
+ }
+    </code></pre>
+           </div>
+           <p>
+             I first check to see if it is a simple value comparison. 
+             Then I check to see if the parameter is an object, and not null because in JavaScript <code>null</code> is an object. 
+             If it is an object we have to access the data that it is holding, so we bind the keys of each object that is going to be 
+             compared. The Object.key() method returns an array of all the keys, so we then test to see the possability of it being equal
+             by comparing the length. If they are arrays of the same size then we search through the array A to see if it holds the same elements 
+             as the keys of B OR we do a recursive call on the values held in the keys of A and B to see if they equal in the simple comparision. 
+             This will also break through nested data structures.
+            </p>
+           
+            <div>
+              <ul class="pt-5"> <strong>Additional resources:</strong>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators" target="_blank">MDN Operators</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice" target="_blank">Splice</a></li>
+                <li><a href="https://stackoverflow.com/questions/30224512/listtoarray-eloquent-javascript">BatScream's Looping through a List</a></li>
+                <li><a href="https://www.w3schools.com/js/js_objects.asp">JS Objects</a></li>
+                <li><a href="https://eloquentjavascript.net/code/#4.2">Eloquent JavaScript Sandbox</a></li>
+              </ul>
+              <ul></ul>
+              <li5></li5>
+              </div>
+            <a href="#contents"><i class="far fa-arrow-alt-circle-up"></i></a>
             </div>
         <!-- Section End -->
         <!-- Section Start -->
@@ -362,7 +650,7 @@ for (let hashAngle = "#"; hashAngle.length &lt; 8; hashAngle += "#"){
                 <p>
                  Exercises for Chapter 2. 
                 </p>
-               <a href="#contents">^ Back to Top ^</a>
+            <a href="#contents"><i class="far fa-arrow-alt-circle-up"></i></a>
             </div>
         <!-- Section End -->
         <!-- Section Start -->
@@ -373,7 +661,7 @@ for (let hashAngle = "#"; hashAngle.length &lt; 8; hashAngle += "#"){
                 <p>
                  Exercises for Chapter 2. 
                 </p>
-               <a href="#contents">^ Back to Top ^</a>
+            <a href="#contents"><i class="far fa-arrow-alt-circle-up"></i></a>
             </div>
         <!-- Section End -->
         <!-- Section Start -->
@@ -384,7 +672,7 @@ for (let hashAngle = "#"; hashAngle.length &lt; 8; hashAngle += "#"){
                 <p>
                  Exercises for Chapter 2. 
                 </p>
-               <a href="#contents">^ Back to Top ^</a>
+            <a href="#contents"><i class="far fa-arrow-alt-circle-up"></i></a>
             </div>
         <!-- Section End -->
         <!-- Section Start -->
@@ -395,7 +683,7 @@ for (let hashAngle = "#"; hashAngle.length &lt; 8; hashAngle += "#"){
                 <p>
                  Exercises for Chapter 2. 
                 </p>
-               <a href="#contents">^ Back to Top ^</a>
+            <a href="#contents"><i class="far fa-arrow-alt-circle-up"></i></a>
             </div>
         <!-- Section End -->
         <!-- Section Start -->
@@ -406,7 +694,7 @@ for (let hashAngle = "#"; hashAngle.length &lt; 8; hashAngle += "#"){
                 <p>
                  Exercises for Chapter 2. 
                 </p>
-               <a href="#contents">^ Back to Top ^</a>
+            <a href="#contents"><i class="far fa-arrow-alt-circle-up"></i></a>
             </div>
         <!-- Section End -->
         <!-- Section Start -->
@@ -417,7 +705,7 @@ for (let hashAngle = "#"; hashAngle.length &lt; 8; hashAngle += "#"){
                 <p>
                  Exercises for Chapter 2. 
                 </p>
-               <a href="#contents">^ Back to Top ^</a>
+            <a href="#contents"><i class="far fa-arrow-alt-circle-up"></i></a>
             </div>
         <!-- Section End -->
         <!-- Section Start -->
@@ -428,7 +716,7 @@ for (let hashAngle = "#"; hashAngle.length &lt; 8; hashAngle += "#"){
                 <p>
                  Exercises for Chapter 2. 
                 </p>
-               <a href="#contents">^ Back to Top ^</a>
+            <a href="#contents"><i class="far fa-arrow-alt-circle-up"></i></a>
             </div>
         <!-- Section End -->
         <!-- Section Start -->
@@ -439,7 +727,7 @@ for (let hashAngle = "#"; hashAngle.length &lt; 8; hashAngle += "#"){
                 <p>
                  Exercises for Chapter 2. 
                 </p>
-               <a href="#contents">^ Back to Top ^</a>
+            <a href="#contents"><i class="far fa-arrow-alt-circle-up"></i></a>
             </div>
         <!-- Section End -->
 

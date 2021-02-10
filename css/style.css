@@ -6,11 +6,29 @@ body {
   color: #616971;
 }
 
+.fa-quote-left, .fa-quote-right{
+  color: #9d75cb;
+}
+.blockq{
+  border-style: solid;
+  border-color: #240046;
+  border-width: thin;
+  padding: 2rem;
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+strong{
+  color: #9d75cb;
+}
 .text-primary {
   color: #9d75cb !important;
 }
 .text-success {
   color: #9d75cb !important;
+}
+.fa-arrow-alt-circle-up{
+  color: #240046;
+  font-size: xx-large;
 }
 
 div pre code {
@@ -21,7 +39,12 @@ div pre code {
 
 code {
   color: #240046;
-  background-color: #e7e6e6;
+  background-color: #f7f7f7;
+}
+div .quote{
+  border-left-style: solid;
+  border-left-color: #9d75cb;
+  border-left-width: medium;
 }
 /*============= TOP BAR HEADER =============*/
 .top-bar {
@@ -169,7 +192,8 @@ a:hover {
 
 .blog-main h1,
 .blog-main h2,
-.blog-main h3 {
+.blog-main h3,
+.blog-main h4 {
   color: black;
 }
 .hero-heading {
@@ -229,10 +253,10 @@ a:hover {
   min-height: 20rem;
   color: #fff;
 }
-/*============= CARD =============*/
-.card-body,
-.card-body img {
-  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
+
+.blog-sidebar{
+  position:sticky;
+  color: black;
 }
 
 /*============= FOOTER =============*/
