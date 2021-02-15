@@ -647,9 +647,77 @@ for (let hashAngle = "#"; hashAngle.length &lt; 8; hashAngle += "#"){
               <h2 id="chpt-5" class="pb-3 pt-3 border-bottom w-50">
                 Chapter 5: Higher-Order Functions.
               </h2>
-                <p>
-                 Exercises for Chapter 2. 
-                </p>
+                <div>
+                  <p>
+                    <strong>Flattening</strong>
+                  </p>
+                    <p>
+                      Use the reduce method in combination with the concat method to "flatten" an array of arrays 
+                      into a single array that has all the elements of the original array. 
+                    </p>
+                  <code>let newArray = arrays.reduce(function (acc, currItem) {
+                        return  acc = acc.concat(currItem);
+                        }, []);
+                      </code>
+                      <p>I have been practicing with the reduce method earlier and am becoming more comfortable. 
+                        A long way to go before I can be creative with it. 
+                      </p>
+
+                      <p><strong>Your Own Loop</strong></p>
+                      <p>
+                        Write a higher-order function <code>loop</code> that provides osmething like 
+                        a <code>for</code> loop statement. It takes a <code>value</code>, a <code>test function</code>, an <code>update function</code>, and 
+                        a <code>body function</code>. Each iteration, it first runs the test function on the current loop value and stopes if that returns false.
+                        Then it calls the body funcitnon, giving it the current value. Finally, it calls the update funciton to create a new value and starts from 
+                        the beginning.
+                      </p>
+                      <div class=" bg-light pre-code">
+                        <pre>
+                             <code>
+   function loop(start, test, update, body){
+     for (let value = start;
+     test(value); 
+     value = update(value)) {
+     body(value);
+     }
+   }
+loop(3, n => n > 0, n => n - 1, console.log);
+// → 3
+// → 2
+// → 1
+                      </code>
+                        </pre>
+                      </div>
+                     <p>
+                       This really gets you thinking about higher order functions. This equates to a while loop
+                       when the simple functions are passed as arguments.
+                     </p>
+
+                     <p><strong>Everything</strong></p>
+                     <p>
+                       Analogoous to the <code>some</code> method, arrays also have an <code>every</code> method. This 
+                       one returns true when the given function returns true for <em>every</em> element in the array. 
+                       In a way, some is a version of the || operator thta acts on arrays, and every is like the && operator.
+                       Implement every as a function that takes an array and a predicate function as parameters. Write two versions, one 
+                       using a loop and one using a <code>some</code> method. 
+                     </p>
+                     <div class="col-md-12 bg-light pre-code">
+                       <pre><code>
+function every(array, predicate) {
+  for (let element of array) {
+    if (!predicate(element)) return false;
+  }
+  return true;
+}
+
+function every2(array, predicate) {
+  return !array.some(element => !predicate(element));
+}                         
+                       </code></pre>
+                     </div>
+
+
+                </div>
             <a href="#contents"><i class="far fa-arrow-alt-circle-up"></i></a>
             </div>
         <!-- Section End -->
@@ -664,72 +732,7 @@ for (let hashAngle = "#"; hashAngle.length &lt; 8; hashAngle += "#"){
             <a href="#contents"><i class="far fa-arrow-alt-circle-up"></i></a>
             </div>
         <!-- Section End -->
-        <!-- Section Start -->
-            <div class="pb-3">
-              <h2 id="chpt-7" class="pb-3 pt-3 border-bottom w-50">
-                Chapter 7: Project: A Robot.
-              </h2>
-                <p>
-                 Exercises for Chapter 2. 
-                </p>
-            <a href="#contents"><i class="far fa-arrow-alt-circle-up"></i></a>
-            </div>
-        <!-- Section End -->
-        <!-- Section Start -->
-            <div class="pb-3">
-              <h2 id="chpt-8" class="pb-3 pt-3 border-bottom w-50">
-                Chapter 8: Bugs and Errors.
-              </h2>
-                <p>
-                 Exercises for Chapter 2. 
-                </p>
-            <a href="#contents"><i class="far fa-arrow-alt-circle-up"></i></a>
-            </div>
-        <!-- Section End -->
-        <!-- Section Start -->
-            <div class="pb-3">
-              <h2 id="chpt-9" class="pb-3 pt-3 border-bottom w-50">
-                Chapter 9: Regular Expressions.
-              </h2>
-                <p>
-                 Exercises for Chapter 2. 
-                </p>
-            <a href="#contents"><i class="far fa-arrow-alt-circle-up"></i></a>
-            </div>
-        <!-- Section End -->
-        <!-- Section Start -->
-            <div class="pb-3">
-              <h2 id="chpt-10" class="pb-3 pt-3 border-bottom w-50">
-                Chapter 10: Modules.
-              </h2>
-                <p>
-                 Exercises for Chapter 2. 
-                </p>
-            <a href="#contents"><i class="far fa-arrow-alt-circle-up"></i></a>
-            </div>
-        <!-- Section End -->
-        <!-- Section Start -->
-            <div class="pb-3">
-              <h2 id="chpt-11" class="pb-3 pt-3 border-bottom w-50">
-                Chapter 11: Asynchronous Programming.
-              </h2>
-                <p>
-                 Exercises for Chapter 2. 
-                </p>
-            <a href="#contents"><i class="far fa-arrow-alt-circle-up"></i></a>
-            </div>
-        <!-- Section End -->
-        <!-- Section Start -->
-            <div class="pb-3">
-              <h2 id="chpt-12" class="pb-3 pt-3 border-bottom w-50">
-                Chapter 12: Project: A Programming Language.
-              </h2>
-                <p>
-                 Exercises for Chapter 2. 
-                </p>
-            <a href="#contents"><i class="far fa-arrow-alt-circle-up"></i></a>
-            </div>
-        <!-- Section End -->
+
 
 
            </div>  <!-- End of .blog-post -->
