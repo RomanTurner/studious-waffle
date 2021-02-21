@@ -1,9 +1,29 @@
 /*-- Body Reset --*/
+#top, #bottom, #left, #right {
+	background: white;
+	position: fixed;
+	}
+	#left, #right {
+		top: 0; bottom: 0;
+		width: 15px;
+		}
+		#left { left: 0; }
+		#right { right: 0; }
+		
+	#top, #bottom {
+    z-index: 10000;
+		left: 0; right: 0;
+		height: 15px;
+		}
+		#top { top: 0; }
+		#bottom { bottom: 0; 
+    }
 
 body {
   overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
   color: #616971;
+  padding: 15px;
 }
 
 .fa-quote-left, .fa-quote-right{
@@ -93,7 +113,7 @@ a:hover {
 
 .carousel.inner {
   height: auto;
-  max-height: 38rem;
+  max-height: 50vh;
   overflow: hidden;
   object-fit: cover;
 }
@@ -158,7 +178,7 @@ a:hover {
 
 /*===== FIXED BACKGROUND IMG =====*/
 .fixed {
-  background-image: url("../img/seattle-sky.jpg");
+  background-image: url("https://images.pexels.com/photos/240514/pexels-photo-240514.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
   position: fixed;
 }
 
