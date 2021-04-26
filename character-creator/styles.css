@@ -1,0 +1,104 @@
+h1, h2 {
+  font-family: 'MedievalSharp', cursive;
+  font-size: 32px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  line-height: 26.4px;
+}
+h3 {
+  font-family: 'MedievalSharp';
+  font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  line-height: 15.4px;
+}
+p{
+  font-family: 'MedievalSharp', cursive;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+blockquote {
+  font-family: 'MedievalSharp';
+  font-size: 21px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 30px;
+}
+pre {
+  font-family: 'MedievalSharp', cursive;
+  font-size: 13px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 18.5714px;
+}
+
+/*######################*/
+
+
+#header-form {
+background: linear-gradient(0deg, rgba(128,106,255,1) 0%, rgba(0,0,0,0.6348914565826331) 100%);
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 2rem;
+}
+
+/*######################*/
+
+
+
+/*Character Container*/
+
+
+.character-container {
+  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  margin-top: 1rem;
+}
+/* Name and Image container */
+
+#name-container {
+  padding-bottom: 1rem;
+  display: grid;
+  text-align: center;
+  justify-content: center;
+  background-color: whitesmoke;
+}
+#img-u {
+    height: 400px;
+    width: 400px;
+}
+img {
+  max-width:100%;
+  max-height:100%;
+}
+
+/* History Container */
+#history-container {
+  text-align: center;
+  display: grid;
+  justify-content: center;
+  background-color: #aaa;
+}
+
+input {
+  margin-top: 10px;
+}
+
+#text-area {
+  background-color: white;
+  padding: 1rem;
+  margin: 1rem;
+  height: 350px;
+  width: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <h1>Forms</h1>
+    <div class="container">
+    <div>
+<form action="http://example.com/process-user.php" method="POST">
+  <input type="text" name="owner-name" placeholder="Full Name">
+  <input type="text" name="dog-name" placeholder="Dog Name">
+  <input type="text" name="favorite-toy" placeholder="Favorite Toy">
+  <input type="submit" value="submit">
+</form>
+</div><!--End of dog form-->
+<div>
+<label for="password">What's the password?</label>
+<input type="password" id="password" name="password" placeholder="Enter your password">
+</div><!--End of Password-->
+<div>
+  <label for="tel"> Where should E.T. &trade; Phone Home?</label>
+  <input id="tel" type="tel" name="phone" placeholder="Phone Number">
+</div><!-- End of Tel--> 
+<div>
+  <h3>Does your dog get along with other dogs?</h3>
+<input type="radio" name="plays-well-with-others" value="high"> The more dogs, the better!<br>
+<input type="radio" name="plays-well-with-others" value="medium"> It depends on the dog, but generally they are ok<br>
+<input type="radio" name="plays-well-with-others" value="low"> My dog prefers their walkies solo<br>
+</div><!--End of Radio Buttons-->
+<div>
+<h3>What size is your dog?</h3>
+<select name="size">
+  <option value="small" selected>Small(0-25 pounds)</option>
+  <option value="medium">Medium (26-50 pounds)</option>
+  <option value="large">Large (51-75 pounds)</option>
+  <option value="x-large">Extra Large (over 75 pounds)</option>
+</select>
+</div><!--End of Select-->
+<div>
+<h3>Any other things we should know about your dog?</h3>
+<textarea name="message"></textarea>
+</div><!--End of textArea-->
+
+</div><!--End of Container-->
+  </body>
+</html>

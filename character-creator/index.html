@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+
+<div id="header-form">
+     
+ <form id="create-character" action="#" method="post">
+      <button type="button" id="new-char">Create New Character</button>
+      <label for="new-character">Edit Character:</label>
+      <input type="text" id="user-input" name="user-input" placeholder="Select an Edit">
+      <select id="char-edits">
+        <option value="select-name">Name</option>
+        <option value="select-sign">Star Sign</option>
+        <option value="select-img">Image URL</option>
+      </select>
+      <input type="submit" value="Submit Edit">
+    </form>
+</div>
+
+<!--Start of character-->
+<div id="character-container" class="character-container">
+<!--Name and image-->
+
+  <div id="name-container">
+     <h1 id="name">Name</h1>
+     <div id="img-u"> 
+      <img id="char-img" src="https://miro.medium.com/max/720/1*W35QUSvGpcLuxPo3SRTH4w.png" alt="img of character">
+      </div>
+      <p>Character Image</p>
+    <input type="file" id="img-up" name="img" accept="image/*">
+    </div>
+
+<!-- Character Background -->
+      <div id="history-container">
+        <div id="star-sign">
+          <h2 id="sign-title">Sign</h2>
+          <h3>History</h3>
+          <div id="text-area">
+            <p id="history-text">
+                Enter Character Background File...
+            </p>
+          </div>
+           <input id="file" type="file" />
+        </div>
+      </div>
+<!--End of Character container-->
+  </body>
+</html>
